@@ -1,0 +1,150 @@
+# TutorialsNinja Demo E-commerce Website: Logout Functionality Testing
+
+## Brief Description
+The provided link leads to a demo version of OpenCart, an open-source e-commerce platform that allows users to set up an online store and manage their products, customers, orders, and more. The demo website showcases the standard features of OpenCart and gives an overview of how a typical online store built with OpenCart would function.
+
+## Objective
+To evaluate the functionality, performance, and usability of the logout feature on the OpenCart demo e-commerce website.
+
+## Tasks
+
+### Feature to be tested: Logout functionality
+
+### Functional Testing
+1. *Verify Links:* Ensure that all links on the homepage navigate to the correct pages.
+2. *Keyword Testing:* Test the feature with different keywords and verify results.
+3. *Accurate Information Display:* Check the feature for accurate information display.
+4. *Add and Verify Information:* Add and verify that the information is working correctly.
+
+### Usability Testing
+1. *Ease of Navigation:* Evaluate the ease of navigation through the website.
+2. *Clarity and Accessibility:* Assess the clarity and accessibility of product information.
+3. *User Experience Feedback:* Provide feedback on the overall user experience.
+
+## Deliverables
+
+### Suggestions for Improvements
+- Based on usability testing feedback.
+
+### Write Module & Sub-module
+- Create a mind map for the same.
+
+### Create a Test Plan Document
+- Detailed test plan for the logout functionality.
+
+### Write Scenarios and Test Cases
+- Detailed test cases for each testing type (functional, usability).
+
+### Test Execution Reports
+- Comprehensive reports on the execution of tests.
+
+### Defect Report
+- Log defects found and mention their severity.
+- Include screenshots or video recordings as mandatory evidence.
+
+## Test Plan Document
+
+### Introduction
+The test plan document outlines the strategy, scope, objectives, and approach for testing the logout functionality of the TutorialsNinja demo e-commerce website.
+
+### Scope
+- *Functional Testing:* Ensure that the logout feature works as expected under various conditions.
+- *Usability Testing:* Evaluate the ease of use and user experience of the logout process.
+
+### Objectives
+- Verify that users can successfully log out.
+- Ensure that the system handles logout requests appropriately.
+- Assess the user-friendliness and accessibility of the logout process.
+
+### Test Scenarios
+
+#### Functional Testing
+1. *Successful Logout*
+2. *Logout from Different Pages*
+3. *Logout with Invalid Session*
+4. *Logout with Multiple Tabs Open*
+5. *Logout with Active Orders*
+
+#### Usability Testing
+1. *Ease of Navigation to Logout*
+2. *Clarity of Logout Confirmation*
+3. *Accessibility of Logout Button*
+4. *Overall User Experience of Logout*
+
+### Test Cases
+
+#### Functional Testing
+
+*Test Case 1: Successful Logout*
+- *Description:* Verify that a user can successfully log out.
+- *Steps:*
+  1. Log in to the website.
+  2. Navigate to the logout button.
+  3. Click the "Logout" button.
+- *Expected Result:* User is successfully logged out and redirected to the login page.
+
+*Test Case 2: Logout from Different Pages*
+- *Description:* Verify that the logout feature works from different pages.
+- *Steps:*
+  1. Log in to the website.
+  2. Navigate to different pages (e.g., Home, Products, Account).
+  3. Click the "Logout" button on each page.
+- *Expected Result:* User is successfully logged out and redirected to the login page from each page.
+
+*Test Case 3: Logout with Invalid Session*
+- *Description:* Verify that the system handles logout requests with an invalid session.
+- *Steps:*
+  1. Log in to the website.
+  2. Invalidate the session manually (e.g., by deleting cookies).
+  3. Attempt to log out.
+- *Expected Result:* User is redirected to the login page without any errors.
+
+*Test Case 4: Logout with Multiple Tabs Open*
+- *Description:* Verify that the logout feature works with multiple tabs open.
+- *Steps:*
+  1. Log in to the website in multiple tabs.
+  2. Click the "Logout" button in one tab.
+  3. Check the status in other tabs.
+- *Expected Result:* User is logged out in all tabs.
+
+*Test Case 5: Logout with Active Orders*
+- *Description:* Verify that the logout feature works with active orders.
+- *Steps:*
+  1. Log in to the website.
+  2. Place an order.
+  3. Click the "Logout" button.
+- *Expected Result:* User is successfully logged out and the order status is maintained.
+
+#### Usability Testing
+
+*Test Case 1: Ease of Navigation to Logout*
+- *Description:* Evaluate the ease of navigation to the logout button.
+- *Steps:*
+  1. Log in to the website.
+  2. Locate the "Logout" button.
+- *Expected Result:* User is easily able to find and navigate to the logout button.
+
+*Test Case 2: Clarity of Logout Confirmation*
+- *Description:* Assess the clarity of the logout confirmation message.
+- *Steps:*
+  1. Log in to the website.
+  2. Click the "Logout" button.
+  3. Observe the confirmation message.
+- *Expected Result:* A clear and understandable logout confirmation message is displayed.
+
+*Test Case 3: Accessibility of Logout Button*
+- *Description:* Evaluate the accessibility of the logout button.
+- *Steps:*
+  1. Log in to the website.
+  2. Attempt to access the logout button using keyboard navigation.
+- *Expected Result:* The logout button is easily accessible and navigable using a keyboard.
+
+*Test Case 4: Overall User Experience of Logout*
+- *Description:* Provide feedback on the overall user experience of the logout process.
+- *Steps:*
+  1. Log in to the website.
+  2. Perform the logout action.
+- *Expected Result:* The logout process is smooth, intuitive, and user-friendly.
+
+## Conclusion
+This README file outlines the objectives, tasks, and deliverables for testing the logout functionality of the TutorialsNinja demo e-commerce website. The detailed test plan and test cases aim to ensure that the logout feature is robust, secure, and user-friendly.
