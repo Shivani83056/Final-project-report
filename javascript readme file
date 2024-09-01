@@ -1,0 +1,117 @@
+# Coffee Shop Order Management System
+
+## Objective
+Develop a system to manage coffee shop orders using JavaScript.
+
+## Tools Required
+- JavaScript
+- Node.js
+
+## Assignment Instructions
+
+### Part 1: Setup
+
+#### Environment Setup:
+1. *Create a new project directory* for the assignment.
+2. *Initialize a new Node.js project* using npm init -y if needed.
+3. *Create a JavaScript file* named coffeeshop.js in your project directory.
+
+### Part 2: Writing the Script
+
+#### Define the CoffeeShop Class:
+Create a class named CoffeeShop with the following methods:
+
+1. *Add Menu Items:*
+   - Implement a method addMenuItem(itemName, price) that adds a new menu item with a name and price to the menu. Store menu items in an array of objects with properties like itemName and price.
+
+2. *Take Customer Orders:*
+   - Create a method takeOrder(tableNumber, items) that records an order for a specific table. The items parameter should be an array of menu item names. Store orders in an array of objects with properties like tableNumber, items, and status.
+
+3. *Update Order Status:*
+   - Implement a method updateOrderStatus(tableNumber, status) that updates the status of an order for a specific table. The status parameter can be "Preparing", "Served", or "Completed". Use .find() to locate the order by tableNumber and update its status.
+
+4. *Calculate Total Bill for a Table:*
+   - Create a method calculateBill(tableNumber) that calculates the total bill for a specific table. Sum the prices of the items in the order for that table. Use .find() to locate the order and .reduce() to compute the total.
+
+5. *Display All Active Orders:*
+   - Implement a method displayActiveOrders() that returns a list of all orders with a status of "Preparing" or "Served". Use .filter() to get active orders.
+
+### Example Data and Operations:
+Create some example menu items and orders to demonstrate the functionality of the CoffeeShop class methods. Show how items are added, orders are placed, statuses are updated, bills are calculated, and active orders are displayed.
+
+### Part 3: Code Structure and Testing
+
+#### Testing Your Methods:
+- After defining the CoffeeShop class, create instances of the class and use the methods with sample data.
+- Log the results to the console to verify that the methods work as expected.
+
+#### Comment Your Code:
+- Include comments throughout your code to describe each method’s purpose and how it interacts with the coffee shop's orders and menu.
+
+## Submission Guidelines
+
+- *Submit the JavaScript file* coffeeshop.js via the Learning Management System (LMS).
+- Ensure your code is well-commented to describe each method's purpose.
+- Verify that your code is clean and follows JavaScript best practices.
+
+## Evaluation Criteria
+
+- *Correctness:* Does the code correctly implement all required functionalities?
+- *Code Quality:* Is the code clean, well-organized, and well-commented?
+- *Functionality:* Does the system handle all specified tasks effectively?
+
+## Example Code Structure
+
+```javascript
+class CoffeeShop {
+    constructor() {
+        this.menu = [];
+        this.orders = [];
+    }
+
+    addMenuItem(itemName, price) {
+        this.menu.push({ itemName, price });
+    }
+
+    takeOrder(tableNumber, items) {
+        this.orders.push({ tableNumber, items, status: 'Preparing' });
+    }
+
+    updateOrderStatus(tableNumber, status) {
+        const order = this.orders.find(order => order.tableNumber === tableNumber);
+        if (order) {
+            order.status = status;
+        }
+    }
+
+    calculateBill(tableNumber) {
+        const order = this.orders.find(order => order.tableNumber === tableNumber);
+        if (order) {
+            return order.items.reduce((total, itemName) => {
+                const item = this.menu.find(menuItem => menuItem.itemName === itemName);
+                return total + (item ? item.price : 0);
+            }, 0);
+        }
+        return 0;
+    }
+
+    displayActiveOrders() {
+        return this.orders.filter(order => order.status === 'Preparing' || order.status === 'Served');
+    }
+}
+
+// Example usage
+const coffeeShop = new CoffeeShop();
+coffeeShop.addMenuItem('Espresso', 3.5);
+coffeeShop.addMenuItem('Latte', 4.0);
+coffeeShop.addMenuItem('Cappuccino', 4.5);
+
+coffeeShop.takeOrder(1, ['Espresso', 'Latte']);
+coffeeShop.takeOrder(2, ['Cappuccino']);
+
+console.log(coffeeShop.displayActiveOrders());
+
+coffeeShop.updateOrderStatus(1, 'Served');
+console.log(coffeeShop.calculateBill(1));
+
+console.log(coffeeShop.displayActiveOrders());
